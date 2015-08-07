@@ -8,8 +8,13 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.0');
+
   api.use('coffeescript', ['client', 'server']);
+  api.use(['underscore', 'http'], 'server');
+  api.use('jquery', 'client');
+
   api.addFiles('client.coffee', 'client');
   api.addFiles('server.coffee', 'server');
+
   api.export('TrueVault');
 });
